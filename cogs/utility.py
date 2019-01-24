@@ -60,7 +60,7 @@ class Utility:
             else:
                 em.add_field(name=u'\u200b', value=i)
 
-        em.set_footer(text=f'Type "{prefix}command" for more info on a command.')
+        em.set_footer(text=f'Type "{prefix}help command" for more info on a command.')
         return em
 
     def format_command_help(self, ctx, cmd):
@@ -91,7 +91,7 @@ class Utility:
             fmt += f"{c.short_doc:<{maxlen}}\n"
 
         em.add_field(name='Subcommands', value=fmt)
-        em.set_footer(text=f'Type "{prefix}help {cmd}" command for more info on a command.')
+        em.set_footer(text=f'Type "{prefix}help {cmd} command" for more info on a command.')
 
         return em
 
